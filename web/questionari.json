@@ -1,0 +1,126 @@
+{
+    "preguntes": [
+     {
+    "id": 1,
+    "pregunta": "Quin és el nom del director de la pel·lícula 'Inception'?",
+    "respostes": [
+      "Christopher Nolan",
+      "Steven Spielberg",
+      "Quentin Tarantino",
+      "Martin Scorsese"
+    ],
+    "resposta_correcta": 0,
+    "imatge": "https://exemple.com/inception.jpg"
+  },
+      {
+        "id": 2,
+        "pregunta": "En quin any es va estrenar la pel·lícula 'Pulp Fiction'?",
+        "respostes": [
+          "1992",
+          "1994",
+          "1996",
+          "1998"
+        ],
+        "resposta_correcta": 1,
+        "imatge": "https://exemple.com/pulp_fiction.jpg"
+      },
+      {
+        "id": 3,
+        "pregunta": "En quin any es va estrenar 'The Matrix'?",
+        "respostes": [
+          "1997",
+          "1998",
+          "1999",
+          "2000"
+        ],
+        "resposta_correcta": 2,
+        "imatge": "https://exemple.com/the_matrix.jpg"
+      },
+      {
+        "id": 4,
+        "pregunta": "Quina pel·lícula va guanyar l'Oscar a la millor pel·lícula en 1999?",
+        "respostes": [
+          "American Beauty",
+          "Shakespeare in Love",
+          "The Green Mile",
+          "The Sixth Sense"
+        ],
+        "resposta_correcta": 1,
+        "imatge": "https://exemple.com/shakespeare_in_love.jpg"
+      },
+      {
+        "id": 5,
+        "pregunta": "En quin any es va estrenar 'Inception'?",
+        "respostes": [
+          "2008",
+          "2009",
+          "2010",
+          "2011"
+        ],
+        "resposta_correcta": 2,
+        "imatge": "https://exemple.com/inception.jpg"
+      },
+      {
+        "id": 6,
+        "pregunta": "En quin any es va estrenar 'Avatar'?",
+        "respostes": [
+          "2007",
+          "2008",
+          "2009",
+          "2010"
+        ],
+        "resposta_correcta": 2,
+        "imatge": "https://exemple.com/avatar.jpg"
+      },
+      {
+        "id": 7,
+        "pregunta": "Quina pel·lícula va guanyar l'Oscar a la millor pel·lícula en 2012?",
+        "respostes": [
+          "The Artist",
+          "The Descendants",
+          "Hugo",
+          "Moneyball"
+        ],
+        "resposta_correcta": 0,
+        "imatge": "https://exemple.com/the_artist.jpg"
+      },
+      {
+        "id": 8,
+        "pregunta": "En quin any es va estrenar 'Gladiator'?",
+        "respostes": [
+          "1998",
+          "1999",
+          "2000",
+          "2001"
+        ],
+        "resposta_correcta": 2,
+        "imatge": "https://exemple.com/gladiator.jpg"
+      },
+      {
+        "id": 9,
+        "pregunta": "En quin any es va estrenar 'The Godfather'?",
+        "respostes": [
+          "1971",
+          "1972",
+          "1973",
+          "1974"
+        ],
+        "resposta_correcta": 1,
+        "imatge": "https://exemple.com/the_godfather.jpg"
+      },
+      {
+        "id": 10,
+        "pregunta": "Quina pel·lícula de 1994 va ser dirigida per Quentin Tarantino?",
+        "respostes": [
+          "Reservoir Dogs",
+          "Pulp Fiction",
+          "Jackie Brown",
+          "Kill Bill"
+        ],
+        "resposta_correcta": 1,
+        "imatge": "https://exemple.com/pulp_fiction.jpg"
+      }
+    ]
+    
+  }
+  
