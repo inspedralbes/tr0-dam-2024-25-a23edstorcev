@@ -3,7 +3,7 @@
     <h1>Gestor de Preguntes</h1>
 
     <div>
-      <h2>Crear Nova Peralta</h2>
+      <h2>Crear Nova Pregunta</h2>
       <input v-model="newQuestion.pregunta" placeholder="Pregunta" />
       <input v-model="newQuestion.resposta_correcta" type="number" placeholder="Índex de Resposta Correcta" />
       <div>
@@ -11,7 +11,7 @@
         <input v-model="newResponse" placeholder="Nova Resposta" />
         <button @click="addResponse">Afegir Resposta</button>
         <ul>
-          <li v-for="(response, index) in newQuestion.respostes" :key="index">
+          <li v-for="(response, index) in newQuestion.respostes" :key="index" class="response-item">
             {{ response }} <button @click="removeResponse(index)">Eliminar</button>
           </li>
         </ul>
@@ -19,19 +19,30 @@
       <button @click="createQuestion">Crear</button>
     </div>
 
-    <h2>Preguntes Peralta</h2>
-    <ul>
-      <li v-for="(question, index) in questions" :key="question.id || index">
-        <input v-model="question.pregunta" @blur="updateQuestion(question)" />
-        <li v-for="(resposta, index) in questions.respostes" :key="question.respostes || index"></li>
-        <input v-model="question.resposta_correcta" type="number" @blur="updateQuestion(question)" />
-        <button @click="deleteQuestion(question.id)">Eliminar</button>
-        <button @click="verifyAnswer(question)">Verificar</button>
-        <img :src="question.imatge" alt="Imatge de la Pregunta" v-if="question.imatge" />
+    <h2>Preguntes </h2>
+    <ul class="questions-list">
+      <li v-for="(question, index) in questions" :key="question.id || index" class="question-item">
+        <div class="question-content">
+          <input v-model="question.pregunta" @blur="updateQuestion(question)" class="question-input" />
+          <div class="respostes-container">
+          <ul class="respostes-list">
+    <li v-for="(resposta, index) in question.respostes" :key="index" class="resposta-item">
+      <input v-model="question.respostes[index]" @blur="updateQuestion(question)" />
+    </li>
+  </ul>
+</div>
+
+          <input v-model="question.resposta_correcta" type="number" @blur="updateQuestion(question)" class="correct-answer-input" />
+          <button @click="updateQuestion(question.id)" class="updatee-btn">Actualitzar</button>
+          <button @click="deleteQuestion(question.id)" class="delete-btn">Eliminar</button>
+          <img :src="question.imatge" alt="Imatge de la Pregunta" v-if="question.imatge" class="question-img" />
+        </div>
       </li>
     </ul>
   </div>
 </template>
+
+
 
 <script>
 
@@ -162,13 +173,14 @@ h2 {
 
 /* Estilo de los inputs */
 input {
-  width: calc(100% - 10px);
+  width: 100%;
   padding: 10px;
   margin: 10px 0;
   border: 2px solid #ddd;
   border-radius: 5px;
   font-size: 1em;
   transition: border-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 input:focus {
@@ -187,6 +199,8 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s;
   margin: 5px 0;
+  display: block;
+  width: 100%;
 }
 
 button:hover {
@@ -199,64 +213,89 @@ button:active {
 }
 
 /* Botón eliminar */
-button.eliminar {
+.delete-btn {
   background-color: #f44336;
 }
 
-button.eliminar:hover {
+.delete-btn:hover {
   background-color: #e41e1e;
 }
 
-/* Botón verificar */
-button.verificar {
-  background-color: #2196F3;
-}
-
-button.verificar:hover {
-  background-color: #0b7dda;
-}
-
-/* Lista de respuestas */
-ul {
+/* Lista de preguntas y respuestas */
+.questions-list {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
-li {
+.question-item {
+  margin-bottom: 20px;
+}
+
+.question-item {
   background-color: #fff;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 20px;
+  border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-li button {
-  margin-left: 10px;
+/* Contenedor de respuestas */
+
+
+
+.question-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
 }
 
 /* Imágenes */
-img {
+.question-img {
   max-width: 100px;
   border-radius: 10px;
   margin-top: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: block; /* Asegurarse de que sea un bloque */
+  margin-left: auto; /* Margen automático para centrar a la izquierda */
+  margin-right: auto; /* Margen automático para centrar a la derecha */
+}
+
+/* Estilos adicionales para inputs de la pregunta */
+.question-input,
+.correct-answer-input {
+  width: 100%;
 }
 
 /* Transiciones */
 button,
 input,
-li {
+.question-item {
   transition: all 0.3s ease;
 }
 
-/* Espaciado entre elementos */
 h3 {
   margin-top: 15px;
   font-size: 1.5em;
   color: #666;
 }
+/* Respuestas y contenedor de respuestas */
+.respostes-container {
+  margin-top: 10px;
+}
+
+.respostes-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinear respuestas a la izquierda */
+  padding: 0; /* Quitar el padding si es necesario */
+}
+
+.resposta-item {
+  margin-bottom: 10px;
+  text-align: left; /* Alinear el texto de cada respuesta a la izquierda */
+}
 
 </style>
+
+

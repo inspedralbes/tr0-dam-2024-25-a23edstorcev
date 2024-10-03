@@ -119,6 +119,22 @@
       ],
       "resposta_correcta": 1,
       "imatge": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWh0_A4D0fbsArlXuehSZGktANIb0uhi96VQ&s"
+    },
+    {
+      "id": 11,
+      "pregunta": "Caca",
+      "respostes": [
+        "caca",
+        "pepe",
+        "lala",
+        "nao"
+      ],
+      "resposta_correcta": 1,
+      "stats": {
+        "correctCount": 0,
+        "incorrectCount": 0,
+        "averageResponseTime": 0
+      }
     }
   ]
 }
