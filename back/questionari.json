@@ -122,19 +122,14 @@
     },
     {
       "id": 11,
-      "pregunta": "Caca",
+      "pregunta": "2",
       "respostes": [
-        "caca",
-        "pepe",
-        "lala",
-        "nao"
+        "1",
+        "2",
+        "3",
+        "4"
       ],
-      "resposta_correcta": 1,
-      "stats": {
-        "correctCount": 0,
-        "incorrectCount": 0,
-        "averageResponseTime": 0
-      }
+      "resposta_correcta": 2
     }
   ]
 }

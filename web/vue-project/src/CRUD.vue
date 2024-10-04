@@ -12,7 +12,7 @@
         <button @click="addResponse">Afegir Resposta</button>
         <ul>
           <li v-for="(response, index) in newQuestion.respostes" :key="index" class="response-item">
-            {{ response }} <button @click="removeResponse(index)">Eliminar</button>
+            {{ response }} <button @click="removeResponse(index)">Remover</button>
           </li>
         </ul>
       </div>
@@ -36,6 +36,7 @@
           <button @click="updateQuestion(question.id)" class="updatee-btn">Actualitzar</button>
           <button @click="deleteQuestion(question.id)" class="delete-btn">Eliminar</button>
           <img :src="question.imatge" alt="Imatge de la Pregunta" v-if="question.imatge" class="question-img" />
+          <input v-model="question.imatge" type="link" @blur="updateQuestion(question)" class="new_imatge" />
         </div>
       </li>
     </ul>
@@ -295,7 +296,22 @@ h3 {
   margin-bottom: 10px;
   text-align: left; /* Alinear el texto de cada respuesta a la izquierda */
 }
+.response-item button {
+  flex-direction: column;
+  background-color: #f44336; /* Mismo color de eliminar */
+  padding: 10px 20px;
+  border: none;
+  
+  font-size: 1em;
+  
+  width: 100%; /* Igual que el de Afegir Resposta */
+  margin-top: 10px;
+}
 
+
+.response-item button:active {
+  background-color: #d32f2f;
+}
 </style>
 
 

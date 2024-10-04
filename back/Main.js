@@ -54,11 +54,6 @@ app.post('/api/questions/', (req, res) => {
     pregunta,
     respostes,
     resposta_correcta,
-    stats: {
-      correctCount: 0,
-      incorrectCount: 0,
-      averageResponseTime: 0,
-    },
   };
 
   questions.push(newQuestion);
