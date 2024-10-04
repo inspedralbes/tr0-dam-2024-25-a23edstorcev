@@ -12,7 +12,8 @@
         <button @click="addResponse">Afegir Resposta</button>
         <ul>
           <li v-for="(response, index) in newQuestion.respostes" :key="index" class="response-item">
-            {{ response }} <button @click="removeResponse(index)">Remover</button>
+            {{ response }}
+            <button @click="removeResponse(index)">Remover</button>
           </li>
         </ul>
       </div>
@@ -25,15 +26,19 @@
         <div class="question-content">
           <input v-model="question.pregunta" @blur="updateQuestion(question)" class="question-input" />
           <div class="respostes-container">
-          <ul class="respostes-list">
-    <li v-for="(resposta, index) in question.respostes" :key="index" class="resposta-item">
-      <input v-model="question.respostes[index]" @blur="updateQuestion(question)" />
-    </li>
-  </ul>
-</div>
-
+            <ul class="respostes-list">
+              <li
+                v-for="(resposta, index) in question.respostes"
+                :key="index"
+                :class="{ 'correct-answer': index === question.resposta_correcta }"
+                class="resposta-item"
+              >
+                <input v-model="question.respostes[index]" @blur="updateQuestion(question)" />
+              </li>
+            </ul>
+          </div>
           <input v-model="question.resposta_correcta" type="number" @blur="updateQuestion(question)" class="correct-answer-input" />
-          <button @click="updateQuestion(question.id)" class="updatee-btn">Actualitzar</button>
+          <button @click="updateQuestion(question.id)" class="update-btn">Actualitzar</button>
           <button @click="deleteQuestion(question.id)" class="delete-btn">Eliminar</button>
           <img :src="question.imatge" alt="Imatge de la Pregunta" v-if="question.imatge" class="question-img" />
           <input v-model="question.imatge" type="link" @blur="updateQuestion(question)" class="new_imatge" />
@@ -42,6 +47,7 @@
     </ul>
   </div>
 </template>
+
 
 
 
@@ -312,6 +318,18 @@ h3 {
 .response-item button:active {
   background-color: #d32f2f;
 }
+/* Clase para respuesta correcta */
+.correct-answer {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+/* Estilos adicionales, si quieres */
+.correct-answer input {
+  border-color: #c3e6cb;
+}
+
 </style>
 
 

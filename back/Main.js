@@ -42,9 +42,9 @@ const writeQuestionsToFile = (questions) => {
 
 // Crear una nueva pregunta
 app.post('/api/questions/', (req, res) => {
-  const { pregunta, respostes, resposta_correcta } = req.body;
+  const { pregunta, respostes, resposta_correcta, imatge } = req.body;
 
-  if (!pregunta || !respostes || resposta_correcta === undefined) {
+  if (!pregunta || !respostes || resposta_correcta === undefined||imatg===undefined) {
     return res.status(400).send('Datos incompletos.');
   }
 
@@ -54,6 +54,7 @@ app.post('/api/questions/', (req, res) => {
     pregunta,
     respostes,
     resposta_correcta,
+    imatge
   };
 
   questions.push(newQuestion);
@@ -106,9 +107,9 @@ app.post('/verify', (req, res) => {
 // Actualizar pregunta
 app.put('/api/questions/:id', (req, res) => {
   const { id } = req.params;
-  const { pregunta, respostes, resposta_correcta } = req.body;
+  const { pregunta, respostes, resposta_correcta, imatge } = req.body;
 
-  if (!pregunta || !respostes || resposta_correcta === undefined) {
+  if (!pregunta || !respostes || resposta_correcta === undefined|| imatge===undefined) {
     return res.status(400).send('Datos incompletos.');
   }
 
@@ -122,6 +123,7 @@ app.put('/api/questions/:id', (req, res) => {
   questionToUpdate.pregunta = pregunta;
   questionToUpdate.respostes = respostes;
   questionToUpdate.resposta_correcta = resposta_correcta;
+  questionToUpdate.imatge = imatge;
 
   writeQuestionsToFile(questions);
   res.json(questionToUpdate);
