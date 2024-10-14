@@ -1,0 +1,124 @@
+{
+  "preguntes": [
+    {
+      "id": 1,
+      "pregunta": "En quin any es va estrenar 'Inception'?",
+      "respostes": [
+        "2008",
+        "2009",
+        "2010",
+        "2011"
+      ],
+      "resposta_correcta": 2,
+      "imatge": "https://m.media-amazon.com/images/I/912AErFSBHL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": 2,
+      "pregunta": "En quin any es va estrenar 'Pulp Fiction'?",
+      "respostes": [
+        "1992",
+        "1994",
+        "1996",
+        "1998"
+      ],
+      "resposta_correcta": 2,
+      "imatge": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSroyu8EVGr7h-0JFIYl2i-6HDpvC9-8lM1Fw&s"
+    },
+    {
+      "id": 3,
+      "pregunta": "En quin any es va estrenar 'The Matrix'?",
+      "respostes": [
+        "1997",
+        "1998",
+        "1999",
+        "2000"
+      ],
+      "resposta_correcta": 2,
+      "imatge": "https://static.euronews.com/articles/stories/08/35/93/32/1200x675_cmsv2_c7416dac-8a99-57b8-b728-b28d69040539-8359332.jpg"
+    },
+    {
+      "id": 4,
+      "pregunta": "En quin any es va estrenar 'American Beauty'?",
+      "respostes": [
+        "1998",
+        "1999",
+        "2000",
+        "2001"
+      ],
+      "resposta_correcta": 1,
+      "imatge": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgC2KzoRsKloBwaNdQAeS5LeznfmC64ydxxHZW740IDVASpHvmAs06raTtBeL-aHDlum_eXg7gFgWGygB_NrEmstUUoor0K0vNVXLU2QLpSi4aLTn7k4CsYKTuC7NBzIEPWaFCFqZT20wMS/s1600/wn.jpg"
+    },
+    {
+      "id": 5,
+      "pregunta": "En quin any es va estrenar 'Avatar'?",
+      "respostes": [
+        "2007",
+        "2008",
+        "2009",
+        "2010"
+      ],
+      "resposta_correcta": 2,
+      "imatge": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYkqliARX8FR37_M6_IpQJoi76XWUFVOOm_w&s"
+    },
+    {
+      "id": 6,
+      "pregunta": "En quin any es va estrenar 'The Artist'?",
+      "respostes": [
+        "2010",
+        "2011",
+        "2012",
+        "2013"
+      ],
+      "resposta_correcta": 0,
+      "imatge": "https://i.blogs.es/57f677/carteles-20de-20algunas-20de-20las-20mejores-20peliculas-20de-202012/450_1000.jpg"
+    },
+    {
+      "id": 7,
+      "pregunta": "En quin any es va estrenar 'Gladiator'?",
+      "respostes": [
+        "1998",
+        "1999",
+        "2000",
+        "2001"
+      ],
+      "resposta_correcta": 2,
+      "imatge": "https://static.euronews.com/articles/stories/08/35/93/32/1200x675_cmsv2_c7416dac-8a99-57b8-b728-b28d69040539-8359332.jpg"
+    },
+    {
+      "id": 8,
+      "pregunta": "En quin any es va estrenar 'The Godfather'?",
+      "respostes": [
+        "1971",
+        "1972",
+        "1973",
+        "1974"
+      ],
+      "resposta_correcta": 1,
+      "imatge": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrF2hYvK9NrOETnjr6ORVVcyLh4O7yH89DsQ&s"
+    },
+    {
+      "id": 9,
+      "pregunta": "En quin any es va estrenar 'Reservoir Dogs'?",
+      "respostes": [
+        "1992",
+        "1993",
+        "1994",
+        "1995"
+      ],
+      "resposta_correcta": 2,
+      "imatge": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWh0_A4D0fbsArlXuehSZGktANIb0uhi96VQ&s"
+    },
+    {
+      "id": 10,
+      "pregunta": "En quin any es va estrenar 'The Dark Knight'?",
+      "respostes": [
+        "2006",
+        "2007",
+        "2008",
+        "2009"
+      ],
+      "resposta_correcta": 2,
+      "imatge": "https://m.media-amazon.com/images/S/pv-target-images/e9a43e647b2ca70e75a3c0af046c4dfdcd712380889779cbdc2c57d94ab63902.jpg"
+    }
+  ]
+}
