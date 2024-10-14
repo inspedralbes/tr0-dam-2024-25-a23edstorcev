@@ -144,7 +144,7 @@ app.delete('/api/questions/:id', (req, res) => {
 });
 
 // Iniciar el servidor
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 23478;
 app.listen(PORT, () => {
-  console.log(`Servidor escuchando en el puerto http://192.168.1.16:${PORT}`);
+  console.log(`Servidor escuchando en el puerto http://a23edstorcev.dam.inspedralbes.cat:${PORT}`);
 });

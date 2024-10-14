@@ -73,7 +73,7 @@ export default {
     // Obtener las preguntas (GET request)
     async fetchQuestions() {
       try {
-        const response = await fetch('http://192.168.1.16:3000/api/questions');
+        const response = await fetch('http://a23edstorcev.dam.inspedralbes.cat:23478/api/questions');
         const data = await response.json();
         this.questions = data.preguntes;
       } catch (error) {
@@ -84,7 +84,7 @@ export default {
     // Crear una nueva pregunta (POST request)
     async createQuestion() {
       try {
-        const response = await fetch('http://192.168.1.16:3000/api/questions', {
+        const response = await fetch('http://a23edstorcev.dam.inspedralbes.cat:23478/api/questions', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ export default {
     // Actualizar una pregunta (PUT request)
     async updateQuestion(question) {
       try {
-        await fetch(`http://192.168.1.16:3000/api/questions/${question.id}`, {
+        await fetch(`http://a23edstorcev.dam.inspedralbes.cat:23478/api/questions/${question.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -130,7 +130,7 @@ export default {
     // Eliminar una pregunta (DELETE request)
     async deleteQuestion(id) {
       try {
-        await fetch(`http://192.168.1.16:3000/api/questions/${id}`, {
+        await fetch(`http://a23edstorcev.dam.inspedralbes.cat:23478/api/questions/${id}`, {
           method: 'DELETE',
         });
         this.questions = this.questions.filter(q => q.id !== id);
